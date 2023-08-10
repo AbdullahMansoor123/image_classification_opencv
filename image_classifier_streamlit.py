@@ -22,7 +22,10 @@ if upload_file is not None:
     raw_bytes = np.asarray(bytearray(upload_file.read()), dtype=np.uint8)
     img = cv2.imdecode(raw_bytes, cv2.IMREAD_COLOR)
     st.image(img, channels='BGR')
-
+else:
+    img_path = 'shark.jpg'
+    img = cv2.imread(img_path)
+    st.image(img,channels='BGR')
 # print(img.shape)
 
     blob_img = cv2.dnn.blobFromImage(img, scalefactor=0.01, size=(224, 224), mean=(104, 117, 123))
