@@ -38,6 +38,6 @@ else:
     output_class = classes[output_class_idx]
     probs = np.exp(final_output) / sum(np.exp(final_output))
     output_prob = np.max(probs)
-    output_stats = f'Class: {output_class}, Prob: {output_prob:.3f}'
+    output_stats = f'Class: {output_class}\n Probability: {output_prob:.3f}'
     st.write(output_stats)
 
