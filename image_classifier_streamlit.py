@@ -43,3 +43,4 @@ else:
     img_path = 'shark.jpg'
     img = cv2.imread(img_path)
     st.image(img,channels='BGR')
+    st.write(f'SAMPLE IMAGE')
